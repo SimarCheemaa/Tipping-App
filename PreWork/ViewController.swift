@@ -9,12 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var tipPercent = 0.15
     
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    @IBOutlet weak var DarkMode: UISwitch!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,8 @@ class ViewController: UIViewController {
         let bill = Double(billAmountTextField.text!) ?? 0
         // Get Total tip by multiplying tip * tippercentage
         let tipPercentages = [0.15, 0.18, 0.2]
-        let tip = bill *
-        tipPercentages[tipControl.selectedSegmentIndex]
+        tipPercent = tipPercentages[tipControl.selectedSegmentIndex]
+        let tip = bill * tipPercent
         let total = bill + tip
         
         // Update Tip Amount Label

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522B44EA28B1A72D00E350CF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B44E928B1A72D00E350CF /* SettingsViewController.swift */; };
 		523E584028A4E7FF00551E4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E583F28A4E7FF00551E4D /* AppDelegate.swift */; };
 		523E584228A4E7FF00551E4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E584128A4E7FF00551E4D /* SceneDelegate.swift */; };
 		523E584428A4E7FF00551E4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E584328A4E7FF00551E4D /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		522B44E928B1A72D00E350CF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		523E583C28A4E7FF00551E4D /* PreWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		523E583F28A4E7FF00551E4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		523E584128A4E7FF00551E4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		523E583E28A4E7FF00551E4D /* PreWork */ = {
 			isa = PBXGroup;
 			children = (
+				522B44E928B1A72D00E350CF /* SettingsViewController.swift */,
 				523E583F28A4E7FF00551E4D /* AppDelegate.swift */,
 				523E584128A4E7FF00551E4D /* SceneDelegate.swift */,
 				523E584328A4E7FF00551E4D /* ViewController.swift */,
@@ -261,6 +264,7 @@
 				523E584428A4E7FF00551E4D /* ViewController.swift in Sources */,
 				523E584028A4E7FF00551E4D /* AppDelegate.swift in Sources */,
 				523E584228A4E7FF00551E4D /* SceneDelegate.swift in Sources */,
+				522B44EA28B1A72D00E350CF /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
