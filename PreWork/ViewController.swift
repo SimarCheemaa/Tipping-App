@@ -16,6 +16,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
 
+    @IBAction func settingsButton(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "settings") as! SettingsViewController
+        vc.modalTransitionStyle = .flipHorizontal
+        vc.modalPresentationStyle = .fullScreen
+//        vc.completionHandler = { text in
+//            self.tipControl.setTitle(text, forSegmentAt: 0)
+//        }
+        present(vc, animated: true)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let newController = segue.destination
+//
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

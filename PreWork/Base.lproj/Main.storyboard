@@ -74,6 +74,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bIH-1F-trw">
+                                <rect key="frame" x="41" y="440" width="331" height="401"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
@@ -103,6 +108,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Settings" image="gear" catalog="system" id="S81-YJ-c5o">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
+                                <action selector="settingsButton:" destination="BYZ-38-t0r" id="8ND-Ar-PnS"/>
                                 <segue destination="QDS-84-fkJ" kind="show" id="HO2-68-2p4"/>
                             </connections>
                         </barButtonItem>
@@ -128,8 +134,8 @@
         <!--Settings View Controller-->
         <scene sceneID="lrY-Fh-0rW">
             <objects>
-                <viewController id="QDS-84-fkJ" customClass="SettingsViewController" customModule="PreWork" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Puz-7R-bzM">
+                <viewController storyboardIdentifier="settings" id="QDS-84-fkJ" customClass="SettingsViewController" customModule="PreWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Puz-7R-bzM" customClass="Setting">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -172,6 +178,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90c-Iv-g25">
+                                <rect key="frame" x="165" y="459" width="56" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="goBack:" destination="QDS-84-fkJ" eventType="touchUpInside" id="oPk-ie-fs1"/>
+                                    <action selector="saveTipAmount:" destination="QDS-84-fkJ" eventType="touchUpInside" id="r5h-DB-eHL"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8U-in-rAK" userLabel="Tip_3">
                                 <rect key="frame" x="20" y="370" width="52.5" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -211,6 +228,8 @@
                         <outlet property="amount1" destination="UWB-XQ-9J8" id="R16-wF-yml"/>
                         <outlet property="amount2" destination="UnD-8Z-sk2" id="nVs-pF-8DI"/>
                         <outlet property="amount3" destination="b1g-dt-Tqz" id="94N-YK-c9A"/>
+                        <outlet property="back" destination="WFG-68-XVe" id="hCY-O1-oQt"/>
+                        <outlet property="backButton" destination="WFG-68-XVe" id="qeB-cb-4rq"/>
                         <outlet property="heading" destination="wMU-BE-GtO" id="oWq-i6-7D6"/>
                         <outlet property="tip1" destination="ovC-9E-Zzu" id="b7t-Jd-xOx"/>
                         <outlet property="tip2" destination="KQK-hI-7vZ" id="xnA-NZ-J8r"/>
@@ -241,6 +260,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
